@@ -1,0 +1,65 @@
+body {
+    background-color: #6F5499;
+}
+
+.task-panel {
+    width: 60%;
+    margin: 60px auto 30px;
+    padding: 15px;
+    position: relative;
+
+    background: #fffaf6;
+    border-radius: 4px;
+    color: #7e7975;
+    box-shadow:
+        0 2px 2px rgba(0,0,0,0.2),
+        0 1px 5px rgba(0,0,0,0.2),
+        0 0 0 12px rgba(255,255,255,0.4);
+}
+
+.task-panel h1 {
+    font-size: 15px ;
+    font-weight: bold;
+    color: #bdb5aa;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebe6e2;
+    text-shadow: 0 1px 0 rgba(235, 230, 225, 0.60);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.task-panel h1 .task-panel-title,
+.task-panel h1 .task-panel-add {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.task-panel h1 .task-panel-title {
+    float: left;
+    padding-right: 5px;
+    color: #6c6763;
+}
+
+.task-panel h1 .task-panel-add {
+    float: right;
+    padding-left: 5px;
+    color: #563D7C;
+}
+
+.task-list {
+}
+
+.task span {
+    height: 20px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.task button {
+    height: 20px;
+    display: inline-block;
+    float: right;
+}
+
+.task button span {
+    line-height: 20px;
+}
