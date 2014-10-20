@@ -68,7 +68,7 @@ $(document).ready(function () {
                 console.log(msg);
             }
         });
-
+        console.log("ID: " + id);
         updateTask(id);
         event.preventDefault();
     });
@@ -93,7 +93,6 @@ function loadAll() {
             var $editBtn = $("<td><button class='btn btn-warning'>Edit</button></td>");
             $editBtn.bind("click", function () {
                 $("#editModal").modal("show");
-
                 var $row = $(this).closest("tr");
 
                 $("#taskId").val($row.find("td.id").html());
@@ -133,6 +132,7 @@ function loadAll() {
 
 function addTask(task) {
     var $tr = $("<tr>");
+    console.log("Added task ID's: " + task.id);
     $tr.append("<td class='id hidden'>" + task.id + "</td>");
     $tr.append("<td class='title'>" + task.title + "</td>");
     $tr.append("<td class='description hidden'>" + task.description + "</td>");
@@ -145,6 +145,7 @@ function addTask(task) {
 
         var $row = $(this).closest("tr");
 
+        $("#taskId").val($row.find("td.id").html());
         $("#editTitle").val($row.find("td.title").html());
         $("#editDescription").val($row.find("td.description").html());
         $("#editStatus").val($row.find("td.status").html()).prop("selected", true);
