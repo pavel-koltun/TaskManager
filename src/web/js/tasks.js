@@ -69,6 +69,7 @@ $(document).ready(function () {
             }
         });
 
+        updateTask(id);
         event.preventDefault();
     });
 });
@@ -177,5 +178,15 @@ function addTask(task) {
 }
 
 function updateTask(id) {
-
+    var trToEdit = $("tr td.id:contains('" + id + "')").closest('tr');
+    $.ajax({
+        type: "GET",
+        url: "/rest/tasks/" + id,
+        data: null
+    }).then(function (data) {
+        trToEdit.find("td.title").html(data.title);
+        trToEdit.find("td.description").html(data.description);
+        trToEdit.find("td.status").html(data.status);
+        trToEdit.find("td.priority").html(data.priority);
+    });
 }
